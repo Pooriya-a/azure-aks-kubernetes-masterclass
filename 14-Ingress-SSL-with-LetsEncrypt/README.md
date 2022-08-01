@@ -20,7 +20,7 @@ helm repo update
 helm install \
   cert-manager jetstack/cert-manager \
   --namespace ingress-basic \
-  --version v1.8.2 \
+  --version v1.9.1 \
   --set installCRDs=true
 
 ## SAMPLE OUTPUT
