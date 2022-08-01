@@ -123,7 +123,7 @@ spec:
 - Resource group: dns-zones
 - Role: Contributor
 
-Note that the Managed Service Identity also must have "DNS Zone Contributor" role to the DNS domain. You can use the following to findto assign the permission to the Managed Service Identity. "UserClientId" is the clientID of the Managed Service Identity.
+Note that the Managed Service Identity also must have "DNS Zone Contributor" role to the DNS domain. You can use the following to find and assign the permission to the Managed Service Identity. "UserClientId" is the clientID of the Managed Service Identity. This stes is just for information and not part of the instructions. Just make sure to assign the MSI "DNS Zone Contributor" role to the DNS domain.
 
 ```
 tenantid=$(az account show --subscription "tigera-customer-success" --query tenantId --output tsv)
