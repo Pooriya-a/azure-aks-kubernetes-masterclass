@@ -88,7 +88,7 @@ spec:
       serviceAccountName: external-dns
       containers:
       - name: external-dns
-        image: k8s.gcr.io/external-dns/external-dns:v0.11.0
+        image: k8s.gcr.io/external-dns/external-dns:v0.12.0
         args:
         - --source=service
         - --source=ingress
@@ -122,6 +122,11 @@ spec:
 - Subscription: Pay-as-you-go
 - Resource group: dns-zones
 - Role: Contributor
+
+Note that the Managed Service Identity also must have "DNS Zone Contributor" role to the DNS domain.
+
+![image](https://user-images.githubusercontent.com/29644478/182235605-cf0301f9-992a-41db-a928-13ea385535ec.png)
+
 
 ### Make a note of Client Id and update in azure.json
 - Go to **Overview** -> Make a note of **Client ID"
