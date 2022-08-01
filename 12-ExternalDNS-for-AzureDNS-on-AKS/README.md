@@ -123,9 +123,18 @@ spec:
 - Resource group: dns-zones
 - Role: Contributor
 
-Note that the Managed Service Identity also must have "DNS Zone Contributor" role to the DNS domain.
+Note that the Managed Service Identity also must have "DNS Zone Contributor" role to the DNS domain. You can use the following to findto assign the permission to the Managed Service Identity. "UserClientId" is the clientID of the Managed Service Identity.
+
+```
+tenantid=$(az account show --subscription "tigera-customer-success" --query tenantId --output tsv)
+subscriptionid=$(az account show --query id -o tsv)
+UserClientId=$(az aks show --name aksdemo1-pooriya --resource-group aks-rg1-pooriya --query identityProfile.kubeletidentity.clientId -o tsv)
+DNSID=$(az network dns zone show --name k8slearning.click --resource-group dns-zones-pooriya --query id -o tsv)
+```
+
 
 ![image](https://user-images.githubusercontent.com/29644478/182235605-cf0301f9-992a-41db-a928-13ea385535ec.png)
+
 
 
 ### Make a note of Client Id and update in azure.json
