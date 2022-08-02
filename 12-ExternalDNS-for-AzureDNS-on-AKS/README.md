@@ -130,6 +130,7 @@ tenantid=$(az account show --subscription "tigera-customer-success" --query tena
 subscriptionid=$(az account show --query id -o tsv)
 UserClientId=$(az aks show --name aksdemo1-pooriya --resource-group aks-rg1-pooriya --query identityProfile.kubeletidentity.clientId -o tsv)
 DNSID=$(az network dns zone show --name k8slearning.click --resource-group dns-zones-pooriya --query id -o tsv)
+az role assignment create --assignee $UserClientId --role 'DNS Zone Contributor' --scope $DNSID
 ```
 
 
