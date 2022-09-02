@@ -42,7 +42,7 @@ git add .
 git commit -am "V1 Base Commit"
 
 # Link Github Remote Repository
-git remote add origin https://github.com/stacksimplify/azure-devops-github-acr-aks-app1.git
+git remote add origin https://github.com/pooriya-a/azure-devops-github-acr-aks-app1.git
 
 # Push to Remote Repository
 git push --set-upstream origin master
