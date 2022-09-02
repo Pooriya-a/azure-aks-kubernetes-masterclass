@@ -48,7 +48,7 @@ git remote add origin https://github.com/pooriya-a/azure-devops-github-acr-aks-a
 git push --set-upstream origin master
 
 # Go to Github Repo - Refresh and check files appeared in githbu repo
-https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
+https://github.com/pooriya-a/azure-devops-github-acr-aks-app1
 ```
 
 ## Step-03: Review github checked-in files
